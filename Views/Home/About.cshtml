@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h2>Add a new Item Here!</h2>
+
+<form action="../Home/SaveNewItem" method="post">
+    <input type="text" name="Name" placeholder="Name" required />
+    <input type="text" name="Description" placeholder="Description" required />
+    <input type="text" name="Quantity" placeholder="Quantity" required />
+    <input type="text" name="Price" placeholder="Price" />
+    <input type="submit" class="btn-block" value="Add Item!" />
+</form>
+
+<p class="danger">@ViewBag.ErrorMessage</p>

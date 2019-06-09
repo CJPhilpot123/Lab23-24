@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in ViewBag.Items)
+{
+    <div class="col-md-3" id="ItemBox">
+        <h3>Name: @item.Name</h3>
+        <p>Description: @item.Description</p>
+        <p>Quantity: @item.Quantity</p>
+        <p>Price: @item.Price</p>
+        <a href="..\Home\Update?Id=@item.Id" class="btn-primary">(Admin Only)Update</a>
+        <a href="..\Home\Delete?Id=@item.Id" class="btn-danger">(Admin Only)Delete</a>
+    </div>
+}
+
+<a href="..\Home\Contact">Register Here!</a><br />
+<a href="..\Home\About">(Admin Only)Add New Item!</a>
+
+
